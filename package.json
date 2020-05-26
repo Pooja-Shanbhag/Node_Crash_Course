@@ -1,0 +1,19 @@
+{
+  "name": "node_crash_course",
+  "version": "1.0.0",
+  "description": "Node crash course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pooja-Shanbhag/Node_Crash_Course.git"
+  },
+  "author": "Pooja Shanbhag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pooja-Shanbhag/Node_Crash_Course/issues"
+  },
+  "homepage": "https://github.com/Pooja-Shanbhag/Node_Crash_Course#readme"
+}
