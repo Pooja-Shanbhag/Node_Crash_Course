@@ -11,9 +11,21 @@ const fs = require('fs');
 const server = http.createServer((req, res) => {
   // console.log(req.url);
   if (req.url === '/') {
+    fs.readFile(path.join(__dirname, 'public', 'index.html'), (err, data) => {
+      if (err) throw err;
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(data);
+    });
     // content type
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end('<h1>HomePage</h1>');
+  }
+
+  if (req.url === '/api/user') {
+    const users = [
+      { name: 'Bob Smith', age: 40 },
+      { name: 'John Doe', age: 30 },
+    ];
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(users));
   }
 });
 
