@@ -10,6 +10,8 @@ class Logger extends EventEmitter {
     //Call event
     this.emit('message', { id: uuid.v4(), msg });
   }
+
+  logToFile(msg) {}
 }
 
 module.exports = Logger;
