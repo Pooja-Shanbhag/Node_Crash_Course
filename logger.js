@@ -14,4 +14,13 @@ class Logger extends EventEmitter {
   logToFile(msg) {}
 }
 
-module.exports = Logger;
+// module.exports = Logger;
+
+// const Logger = require('./logger');
+
+const logger = new Logger();
+logger.on('message', (data) => console.log('Called Listner: ', data));
+
+logger.log('Hello world');
+logger.log('Hello world2');
+logger.log('Hello world3');
